@@ -1,0 +1,32 @@
+<h1>Cursos</h1>
+<%= link_to 'Nuevo curso', new_curso_path,class: "btn btn-success" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Profesor</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th Acciones></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cursos.each do |curso| %>
+      <tr>
+        <td><%= curso.nombre %></td>
+        <td><%= curso.profesor %></td>
+        <td><%= curso.precio %></td>
+        <td><%= curso.descripcion %></td>
+        <td><%= link_to 'Ver', curso , class: "btn btn-primary" %></td>
+        <td><%= link_to 'Editar', edit_curso_path(curso), class: "btn btn-info" %></td>
+        <td><%= link_to 'Eliminar', curso, method: :delete, data: { confirm: 'Estas seguro?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
