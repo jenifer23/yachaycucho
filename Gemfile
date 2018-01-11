@@ -12,6 +12,7 @@ gem 'rails', '~> 5.0.6'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'devise'
+#gem 'protected_attributes'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
